@@ -1474,10 +1474,10 @@ void MpObjectReference::ProcessActivateNormal(
   if (pickable && !IsHarvested()) {
     // forbiddenReloot types are static world decor: never handed out at all.
     // Runtime (0xff) refs stay lootable so player-dropped items keep working.
-    if (IsEspmForm() && worldState->IsRelootForbidden(baseType)) {
+    if (IsEspmForm() && worldState->IsRelootForbidden(t.ToString())) {
       return spdlog::trace("MpObjectReference::ProcessActivate {:x} - pickup "
                            "rejected, base type {} is forbidden to reloot",
-                           GetFormId(), baseType);
+                           GetFormId(), t.ToString());
     }
     GivePickupItemsToActivationSource(activationSource, base);
     SetHarvested(true);
