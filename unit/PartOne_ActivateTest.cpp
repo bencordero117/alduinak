@@ -665,7 +665,7 @@ TEST_CASE("Forbidden-reloot base types are static and can't be picked up",
   auto& ref = partOne.worldState.GetFormAt<MpObjectReference>(refrId);
   REQUIRE(!ref.IsHarvested());
 
-  partOne.worldState.SetForbiddenRelootTypes({ "FLOR" });
+  partOne.worldState.SetForbiddenRelootTypes({ "TREE" });
   ref.Activate(ac);
   partOne.Tick();
 
