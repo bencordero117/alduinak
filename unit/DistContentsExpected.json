@@ -10,6 +10,7 @@
       "server/dist_back/skymp5-server.js.map",
       "server/gamemode.js",
       "server/package.json",
+      "server/respawn.ts",
       "server/scam_native.node",
       "server/server-settings.json",
       "server/yarn.lock"
